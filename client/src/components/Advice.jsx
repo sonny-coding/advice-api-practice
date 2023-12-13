@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { mobile, desktop, dice } from "../images";
 
 // eslint-disable-next-line react/prop-types
 const Advice = () => {
@@ -21,9 +22,15 @@ const Advice = () => {
     }
   }
   return (
-    <div>
-      <p>{advice?.slip.id} </p>
-      <p>{advice?.slip.advice} </p>
+    <div className="bg-dark-grayish-blue w-[550px] px-12 py-7 rounded-lg">
+      <p className="text-base font-extrabold leading-normal text-center uppercase text-neon-green">
+        {`Advice #${advice?.slip.id}`}
+      </p>
+      <p className="text-center text-[28px] leading-normal font-extrabold text-light-cyan mt-4">
+        {advice?.slip.advice}{" "}
+      </p>
+      <img src={desktop} alt="divider" className="w-full mt-4" />
+      <img src={dice} alt="dice" />
       <button onClick={fetchAdvice}>Another one!</button>
     </div>
   );
