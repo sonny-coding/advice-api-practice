@@ -6,7 +6,7 @@ export default function App() {
       <h1 className="text-3xl font-bold underline font-manrope">
         Hello world!
       </h1>
-      <Advice />
+      <Advice advice={"do something"} num={123} />
     </>
   );
 }
