@@ -13,6 +13,9 @@ export default {
       fontFamily: {
         manrope: ["Manrope", "sans-serif"],
       },
+      boxShadow: {
+        neon: "0px 0px 100px 30px rgba(82,255,168,0.7);",
+      },
     },
   },
   plugins: [],
