@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { mobile, desktop, dice } from "../images";
 import Loader from "./Loader";
+import useScreenSize from "../hooks/useScreenSize";
 
 // eslint-disable-next-line react/prop-types
 const Advice = () => {
+  const screenSize = useScreenSize();
   const [advice, setAdvice] = useState();
   const [loading, isLoading] = useState(false);
   async function fetchAdvice() {
@@ -33,6 +35,7 @@ const Advice = () => {
 
   return (
     <div className="relative bg-dark-grayish-blue w-[550px] h-fit min-h-[250px] px-12 py-7 rounded-lg">
+      <p>Width: {screenSize.width}</p>
       {loading ? (
         <div className="flex items-center justify-center w-full">
           <Loader />
